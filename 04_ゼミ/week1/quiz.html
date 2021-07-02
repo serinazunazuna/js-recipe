@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>私の趣味はなんでしょう？</h1>
+    <button id="dance">ダンス</button>
+    <button id="pro">プログラミング</button>
+    <button id="shima">島巡り</button>
+
+    <div id="answer">回答を表示する場所</div>
+
+    <script>
+      const display = document.getElementById("answer")
+      const dance = document.getElementById("dance")
+      const pro = document.getElementById("pro")
+      const shima = document.getElementById("shima")
+
+      dance.onclick = function() {
+        display.textContent = "すき！！"
+      }
+
+      pro.onclick = function() {
+        display.textContent = "エキスパで頑張る"
+      }
+
+      shima.onclick = function() {
+        display.textContent = "今大雨でやばい、、"
+      }
+    </script>
+  </body>
+</html>
