@@ -15,27 +15,30 @@
       const addButton = document.getElementById(`add-button`)
       const memoContainer = document.getElementById(`memo-container`)
 
+      //配列の作成
+      let memos = []
+      console.log(memos)
+
       addButton.onclick = function() {
-        console.dir(memoInput)
-        console.log(memoInput.id)
+        //inputの中身を取得
         const text = memoInput.value
+        //inputの中身をmemosに入れたい
+        memos.push(text)
+        console.log(memos)
 
-        //HTMLにテキストを追加する
-        const div = document.createElement("div")
-        div.textContent = text
+        memoContainer.innerHTML = ""
 
-        memoContainer.append(div)
+        //配列に入っている内容の繰り返し
+        for (let i = 0; i < memos.length; i++) {
+          console.log(i)
+
+          const div = document.createElement("div")
+          div.textContent = memos[i]
+
+          memoContainer.append(div)
+        }
+        console.log(memos)
       }
-
-      const newDiv = document.createElement("div")
-      newDiv.className = "new"
-      newDiv.textContent = "こんばんは"
-
-      const newDivsContainer = document.getElementById("newDiv")
-      const newDiv = document.createElement("div")
-      newDiv.textContent = "こんばんは"
-
-      cardsContainer.appendChild(newDiv)
 
       // タグ名を指定して要素をつくる
     </script>
