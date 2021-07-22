@@ -26,6 +26,7 @@
       <h3>買った商品</h3>
       <div id="display-items"></div>
     </section>
+
     <script>
       // HTML要素を取得する
       const buyButtonTea = document.getElementById("buy-button-tea")
@@ -46,7 +47,7 @@
           displayJihankiMoney.textContent = jihankiMoney
         }
       }
-      //addButton100　を押した時の処理,（100円入れるボタンを押した時）
+      //100円入れるボタンを押した時）
       addButton100.onclick = function() {
         if (saifu >= 100) {
           saifu = saifu - 100
